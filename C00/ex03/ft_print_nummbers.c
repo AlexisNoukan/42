@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void ft_pritn_numbers(void){
-	write(1, "0123456789,10);
-
+void	ft_print_numbers(void)
+{
+	write(1, "0123456789", 10);
 }
