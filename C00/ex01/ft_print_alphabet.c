@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 10:48:49 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/07 14:01:37 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/07 14:02:25 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/07 14:26:00 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-int ft_putchar(char c) {
+void ft_print_alphabet(void){
+	write(1," abcdefghijklmnopqurstuvwxyz",1);
 
-	write(1, &c, 1);	
-	return 0;
 }
