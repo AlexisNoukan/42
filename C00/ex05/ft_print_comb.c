@@ -1,24 +1,48 @@
-void	ft_print_comb(void)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/08 09:26:30 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/08 13:33:26 by anoukan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+void    ft_print_comb(void)
 {
-    int i, j, k;
-
-    for (i = 0; i <= 7; i++)
+    int o;
+    int k;
+    int l;
+    
+    o = '0';
+    k = '1';
+    l = '2';
+    
+    while (o <= ('6' + 1))
     {
-        for (j = i + 1; j <= 8; j++)
-	{
-            for (k = j + 1; k <= 9; k++)
-	    {
-                ft_putchar(i + '0');
-                ft_putchar(j + '0');
-                ft_putchar(k + '0');
-
-                if (i != 7 || j != 8 || k != 9)
-		{
-                    ft_putchar(',');
-                    ft_putchar(' ');
-                }
+        while (k <= ('7' + 1))
+        {
+            while (l <= ('8' + 1))
+            {
+                ft_display(o, k, l);
+                l++ ; 
             }
+            l = ++k ;
         }
+        k = ++o ;
     }
-    ft_putchar('\n');
+}
+void ft_putchar(char t)
+{
+    write(1, &t, 1);
+}
+
+void ft_display(int o, int k, int l)
+{
+    ft_putchar(o);
+    ft_putchar(k);
+    ft_putchar(l);
+    ft_putchar(',');
+    ft_putchar(' ');
 }
