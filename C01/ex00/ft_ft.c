@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 14:02:25 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 10:23:42 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/09 10:10:42 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/09 10:17:36 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	char a = 'a';
-	while(a <= 'z')
-	{
-		write(1, &a, 1);
-		++a;
-	}
-}
-
-int	main(void)
-{
-	ft_print_alphabet();
+	
 }
