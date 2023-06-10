@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: adenord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 10:10:42 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 15:18:47 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/08 12:15:13 by adenord           #+#    #+#             */
+/*   Updated: 2023/06/08 13:39:13 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+//#include <stdio.h>
+
+int	ft_strlen(char *str)
 {
-	
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
-int	main()
+/*
+int main()
 {
-	ft_ft();
-}
+	char *str = "I'm a string man 19";
+	printf("%d", ft_strlen(str));
+} */

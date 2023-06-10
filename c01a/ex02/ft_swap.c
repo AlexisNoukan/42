@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: adenord <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 10:10:42 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 15:18:47 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/08 10:34:41 by adenord           #+#    #+#             */
+/*   Updated: 2023/06/08 10:46:03 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+// #include <stdio.h>
+
+void	ft_swap(int *a, int *b)
 {
-	
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
-int	main()
+/*
+int main()
 {
-	ft_ft();
-}
+	int a;
+	int b;
+
+	a = 10;
+	b = 200;
+	ft_swap(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
+} */
