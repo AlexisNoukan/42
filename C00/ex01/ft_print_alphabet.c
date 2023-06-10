@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 14:02:25 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 10:23:42 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/10 11:21:47 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void	ft_print_alphabet(void)
 {
-	char a = 'a';
-	while(a <= 'z')
+	char	a;
+
+	a = 'a';
+	while (a <= 'z')
 	{
 		write(1, &a, 1);
 		++a;
 	}
 }
-
-int	main(void)
+/*int	main(void)
 {
 	ft_print_alphabet();
-}
+}*/

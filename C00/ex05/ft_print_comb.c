@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 09:26:30 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 10:11:27 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/10 11:27:57 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,7 +21,7 @@ void	ft_display(int o, int k, int l)
 	ft_putchar(o);
 	ft_putchar(k);
 	ft_putchar(l);
-	if(o != '7')
+	if (o != '7')
 	{
 		ft_putchar(',');
 		ft_putchar(' ');
@@ -49,12 +49,11 @@ void	ft_print_comb(void)
 			l = ++k + 1;
 		}
 		k = ++o + 1;
-		l=k+1;
+		l = k + 1;
 	}
 }
-
-int main()
+/*int main()
 {
 	ft_print_comb();
 	return 0;
-}
+}*/

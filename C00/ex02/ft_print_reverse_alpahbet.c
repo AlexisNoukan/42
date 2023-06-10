@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 14:14:32 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 10:20:53 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/10 11:24:00 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 void	ft_print_reverse_alphabet(void)
 {
-	char z = 'z';
-	while(z >= 'a')
+	char	z;
+
+	z = 'z';
+	while (z >= 'a')
 	{
 		write(1, &z, 1);
 		--z;
 	}
 }
-
-int	main(void)
+/*int	main(void)
 {
 	ft_print_reverse_alphabet();
 	return 0;
-}
+}*/
