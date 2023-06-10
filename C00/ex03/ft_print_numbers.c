@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alpahbet.c                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 14:14:32 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 11:24:00 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/07 14:26:40 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/10 16:51:53 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_reverse_alphabet(void)
+void	ft_print_numbers(void)
 {
-	char	z;
+	char	n;
 
-	z = 'z';
-	while (z >= 'a')
+	n = '0';
+	while (n <= '9')
 	{
-		write(1, &z, 1);
-		--z;
+		write(1, &n, 1);
+		++n;
 	}
 }
 /*int	main(void)
 {
-	ft_print_reverse_alphabet();
-	return 0;
+	ft_print_numbers();
 }*/
