@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alpahbet.c                        :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 14:14:32 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/10 16:50:05 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/11 15:34:22 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ void	ft_print_reverse_alphabet(void)
 		--z;
 	}
 }
-
-int	main(void)
+/*int	main(void)
 {
 	ft_print_reverse_alphabet();
 	return (0);
-}
+}*/
