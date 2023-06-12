@@ -1,15 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 10:10:42 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/12 15:01:18 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/12 16:11:12 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/12 16:23:37 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_ft(int *nbr)
+#include <unistd.h>
+char	*ft_strcpy(char *dest, char *src)
 {
-	*nbr = 42;
+	*dest = *src;
+	while(dest)
+	{
+		write(1, dest, 1);
+		++dest;
+	}
+	return (0);
+}
+int	main()
+{
+	char	src[] = "Hello, world!";
+	ft_strcpy(src);
 }

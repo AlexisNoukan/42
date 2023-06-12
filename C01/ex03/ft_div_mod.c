@@ -1,15 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 10:10:42 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/12 15:01:18 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/12 10:11:56 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/12 14:52:34 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_ft(int *nbr)
+
+//#include <stdio.h>
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*nbr = 42;
+	*div = a / b;
+	*mod = a % b;
 }
+/*int	main()
+{
+	int div;
+	int mod;
+	ft_div_mod(2, 4, &div, &mod);
+	printf("24 %d\n",mod);
+	printf("2/4 %d",div);
+}*/
