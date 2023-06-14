@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:23:18 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 13:26:37 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/14 16:01:44 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_str_is_lowercase(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] <= 'a' && str[i] <= 'z'|| n =="")
+		if (str[i] <= 'a' && str[i] <= 'z'|| n == "")
 		{
 			return (1);
 		}
