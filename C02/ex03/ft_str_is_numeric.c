@@ -6,20 +6,19 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 14:02:36 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/13 14:33:29 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/14 13:20:16 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
+//#include <stdio.h>
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if (str[i] >= '0' && str[i] <= '9')
+		if (str[i] >= '0' && str[i] <= '9' || n == "")
 		{
 			return (1);
 		}
@@ -27,7 +26,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (0);
 }
-int	main()
+/*int	main()
 {
 	char str[] = "1234";
 	int	resultat =  ft_str_is_numeric(str);
@@ -38,5 +37,4 @@ int	main()
 	printf("%d", resultat);
 	printf("%d", resultat2);
 	printf("%d", resultat3);
-}
-
+}*/

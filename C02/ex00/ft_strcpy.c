@@ -9,23 +9,24 @@
 /*   Updated: 2023/06/13 08:33:35 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-char	*ft_strcpy(char *dest,char *src)
+
+//#include <stdio.h>
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	while(src[i])
+	while (src[i])
 	{
 		dest[i] = src[i];
 		++i;
 	}
-	return(dest);
+	return (dest);
 }
-int	main()
+/*int	main()
 {
 	char dest[14];
 	char src[] = "Hello, World!";
 	ft_strcpy(dest, src);
 	printf("%s", ft_strcpy(dest, src));
-}
+}*/

@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 10:47:35 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 12:55:21 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/14 09:18:53 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/14 13:28:04 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-int	ft_str_is_alpha(char *str)
+int	ftr_str_is_uppercase(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] <= 'A' && str[i] <= 'Z' || str[i] <= 'a' && str[i] <= 'z')
+	while (str[i])
 	{
-		return (0);
+		if (n >= 'A' && n <= 'Z' || n == "")
+		{
+			return (1);
+		}
 		++i;
 	}
-	return (1);
+	return (0);
 }
-/*int	main()
-{
-	char str[] = "Hello";	
-	int	resultat =  ft_str_is_alpha(str);
-	printf("%d", resultat);
-	
-}*/

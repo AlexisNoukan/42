@@ -6,26 +6,27 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:23:18 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/13 14:50:12 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/14 13:26:37 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-int ft_str_is_lowercase(char *str)
+//#include <stdio.h>
+int	ft_str_is_lowercase(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i])
-    {	if (str[i] <= 'a' && str[i] <= 'z')
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] <= 'a' && str[i] <= 'z'|| n =="")
 		{
 			return (1);
 		}
-        ++i;
-    }
-    return (0);
+		++i;
+	}
+	return (0);
 }
-int	main()
+/*int	main()
 {
 	char str[] = "1234";
 	int	resultat =  ft_str_is_lowercase(str);
@@ -36,4 +37,4 @@ int	main()
 	printf("%d", resultat);
 	printf("%d", resultat2);
 	printf("%d", resultat3);
-}
+}*/
