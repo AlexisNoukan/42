@@ -14,7 +14,7 @@ char	*ft_strupcaes(char *str)
 {
 	while (str[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
+		if (str[i] >= 97 && str[i] <= 122)
 		{
 			str[i] = str[i] - 32;
 		}

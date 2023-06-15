@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
+
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -24,9 +25,9 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-int	main()
+/*int	main(void)
 {
-	char dest[14];
-	char src[] = "Hello, World!";
+	char	dest[14];
+	char	src[] = "Hello, World!";
 	printf("%s", ft_strcpy(dest, src));
-}
+}*/

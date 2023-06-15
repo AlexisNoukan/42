@@ -10,11 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ftr_str_is_uppercase(char *str)
+//#include <stdio.h>
+
+int	ft_str_is_uppercase(char *str)
 {
-	while (str[i])
+	int	i;
+
+	i = 0;
+	if (str[i] == '\0')
 	{
-		if (!((n >= 'A' && n <= 'Z') || (n == '\0')))
+		return (1);
+	}
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
 		{
 			return (0);
 		}
@@ -22,3 +31,16 @@ int	ftr_str_is_uppercase(char *str)
 	}
 	return (1);
 }
+
+/*int	main()
+{
+	char str[] = "1234";
+	int	resultat =  ft_str_is_uppercase(str);
+	char str2[] = "hello";
+    int resultat2 =  ft_str_is_uppercase(str2);
+	char str3[] = "";
+    int resultat3 =  ft_str_is_uppercase(str3);
+	printf("%d", resultat);
+	printf("%d", resultat2);
+	printf("%d", resultat3);
+}*/

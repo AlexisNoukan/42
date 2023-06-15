@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
@@ -28,9 +29,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-int	main()
+/*int	main()
 {
 	char	dest[15];
 	char	src[] = "Hello world";
 	printf("%s", ft_strncpy(dest, src,2));
-}
+}*/

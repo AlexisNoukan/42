@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
+
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
@@ -30,8 +31,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (0);
 }
-
-int	main()
+/*int	main()
 {
 	char str[] = "1234";
 	int	resultat =  ft_str_is_numeric(str);
@@ -42,4 +42,4 @@ int	main()
 	printf("%d", resultat);
 	printf("%d", resultat2);
 	printf("%d", resultat3);
-}
+}*/
