@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sutrupcase.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 10:12:10 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 10:56:25 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/10 16:05:14 by gmillet           #+#    #+#             */
+/*   Updated: 2023/06/11 16:57:28 by gmillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcaes(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	while (str[i] != '\0')
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
-		{
-			str[i] = str[i] - 32;
-		}
-		++i;
+		dest[i] = src[i];
+		i++;
 	}
-	return (str);
+	dest[i] = '\0';
+	return (dest);
 }

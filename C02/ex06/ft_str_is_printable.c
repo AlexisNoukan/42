@@ -6,19 +6,19 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:44:29 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 13:35:36 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/15 10:54:39 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_printable(char *str)
 {
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		if (n >= 32 && n <= 126 || n == "")
+		if (!((n >= 32 && n <= 126) || (n == '\0')))
 		{
-			return (1);
+			return (0);
 		}
 		++i;
 	}
-	return (0);
+	return (1);
 }

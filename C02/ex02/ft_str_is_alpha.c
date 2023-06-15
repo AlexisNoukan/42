@@ -6,27 +6,27 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 10:47:35 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 12:55:21 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/15 15:14:24 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] <= 'A' && str[i] <= 'Z' || str[i] <= 'a' && str[i] <= 'z')
+	while (!((str[i] <= 'A' && str[i] <= 'Z') || (str[i] <= 'a' && str[i] <= 'z') || (str[i] == '\0')))
 	{
 		return (0);
-		++i;
 	}
+	++i;
 	return (1);
 }
-/*int	main()
+int	main()
 {
-	char str[] = "Hello";	
+	char str[] = "\0";	
 	int	resultat =  ft_str_is_alpha(str);
 	printf("%d", resultat);
 	
-}*/
+}

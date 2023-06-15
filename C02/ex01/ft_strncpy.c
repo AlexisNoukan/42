@@ -6,17 +6,17 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 09:25:55 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 13:16:59 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/15 15:10:55 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] && i < n)
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		++i;
@@ -28,9 +28,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-/*int	main()
+int	main()
 {
 	char	dest[15];
 	char	src[] = "Hello world";
-	printf("%s", ft_strncpy(dest, src,15));
-}*/
+	printf("%s", ft_strncpy(dest, src,2));
+}

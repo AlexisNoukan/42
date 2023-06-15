@@ -6,19 +6,19 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:07:50 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/14 13:03:39 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/15 10:57:53 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		if (n <= 'a' && n >= 'z')
 		{
-			return (1);
+			str[i] = str[i] + 32;
 		}
 		++i;
 	}
-	return (0);
+	return (str);
 }

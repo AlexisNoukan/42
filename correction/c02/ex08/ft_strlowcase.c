@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sutrupcase.c                                    :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 10:12:10 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 10:56:25 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/13 12:52:12 by gmillet           #+#    #+#             */
+/*   Updated: 2023/06/13 18:12:42 by gmillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-char	*ft_strupcaes(char *str)
+char	*ft_strlowcase(char *str)
 {
+	int	i;
+
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[i] = str[i] - 32;
+			str[i] = str[i] + 32;
 		}
-		++i;
+		i++;
 	}
 	return (str);
 }

@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sutrupcase.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 10:12:10 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 10:56:25 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/12 13:02:06 by gmillet           #+#    #+#             */
+/*   Updated: 2023/06/12 18:58:16 by gmillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcaes(char *str)
+int	ft_str_is_alpha(char *str)
 {
+	int	i;
+
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
+		if (!((str[i] >= 'a' && str[i] <= 'z')
+				|| (str[i] >= 'A' && str[i] <= 'Z')))
 		{
-			str[i] = str[i] - 32;
+			return (0);
 		}
-		++i;
+		i++;
 	}
-	return (str);
+	return (1);
 }

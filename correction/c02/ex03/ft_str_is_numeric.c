@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sutrupcase.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 10:12:10 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 10:56:25 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/12 18:27:51 by gmillet           #+#    #+#             */
+/*   Updated: 2023/06/12 19:14:41 by gmillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strupcaes(char *str)
+int	ft_str_is_numeric(char *str)
 {
+	int	i;
+
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
+		if (!(str[i] >= '0' && str[i] <= '9'))
 		{
-			str[i] = str[i] - 32;
+			return (0);
 		}
-		++i;
+		if (str[i] == '\0')
+			return (1);
+		i++;
 	}
-	return (str);
+	return (1);
 }

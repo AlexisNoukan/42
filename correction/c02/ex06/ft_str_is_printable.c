@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sutrupcase.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 10:12:10 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 10:56:25 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/12 20:10:49 by gmillet           #+#    #+#             */
+/*   Updated: 2023/06/12 21:31:07 by gmillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strupcaes(char *str)
+int	ft_str_is_printable(char *str)
 {
+	int	i;
+
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if (n >= 97 && n <= 122)
+		if (!(str[i] >= 33 && str[i] <= 126))
 		{
-			str[i] = str[i] - 32;
+			return (0);
 		}
-		++i;
+		i++;
 	}
-	return (str);
+	return (1);
 }
