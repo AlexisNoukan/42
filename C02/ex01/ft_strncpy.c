@@ -6,11 +6,11 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 09:25:55 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 15:10:55 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/16 09:54:29 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
