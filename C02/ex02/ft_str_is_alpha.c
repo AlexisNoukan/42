@@ -6,11 +6,11 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 10:47:35 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/15 15:14:24 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/16 13:51:38 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -21,18 +21,19 @@ int	ft_str_is_alpha(char *str)
 	{
 		return (1);
 	}
-	while (!((str[i] <= 'A' && str[i] <= 'Z') || \
-		(str[i] <= 'a' && str[i] <= 'z')))
+	while(str[i])
 	{
+	if (!((str[i] >= 'A' && str[i] <= 'Z') ||
+				(str[i] >= 'a' && str[i] <= 'z')))
 		return (0);
+	i++;
 	}
-	++i;
 	return (1);
 }
-/*int	main()
+int	main()
 {
-	char str[] = "\0";	
+	char str[] = "hjgkjhgk1565kjhgy";	
 	int	resultat =  ft_str_is_alpha(str);
 	printf("%d", resultat);
 	
-}*/
+}
