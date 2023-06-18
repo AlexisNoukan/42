@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:07:50 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/16 09:51:09 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/18 14:28:24 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strlowcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 'a' && str[i] >= 'z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
 			str[i] = str[i] + 32;
 		}
