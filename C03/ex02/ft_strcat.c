@@ -6,11 +6,12 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 17:14:24 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/18 18:19:06 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/18 20:53:13 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -23,14 +24,17 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	while (src[i] != '\0')
 	{
-		src[i] = dest[i];
+		dest[i] = src[i];
 		++i;
 	}
 	return (dest);
 }
-int	main(void)
+int	main()
 {
-	char	s1[] = "Hello World";
+	char	s1[100] = "Hello World";
 	char	s2[] = "chad";
-	printf("%s",ft_strcat(s1, s2));
+	printf("%s\n", ft_strcat(s1, s2));
+	char    s3[100] = "Hello World";
+    char    s4[] = "chad";
+	printf("%s", strcat(s3, s4));
 }
