@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 16:49:24 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/20 09:50:11 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/19 16:13:08 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/20 16:16:25 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putstr(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((i < n) && (s1[i] || s2[i]))
+	while (str[i])
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		++i;
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (0);
 }
-/*int	main(void)
+/*int	main()
 {
-	int	n = 50;
-	char s1[] = "Hello";
-	char s2[] = "Hqllo";
-
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	printf("%d", strncmp(s1, s2, n));
+	char	s1[] = "Hello World!";
+	ft_putstr(s1);
 }*/

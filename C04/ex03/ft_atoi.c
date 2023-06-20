@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 16:49:24 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/20 09:50:11 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/20 13:57:03 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/20 16:15:24 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <string.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_atoi(char *str)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
+	int	c;
 
 	i = 0;
-	while ((i < n) && (s1[i] || s2[i]))
+	j = 0;
+	c = 1;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		++i;
+		i++;
 	}
-	return (0);
+	while (str[i] == '-' || str[i] == '+')
+	{	
+		if (str[i] == '-')
+			c *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		j *= 10;
+		j += str[i] - '0';
+		i++;
+	}
+	return (c * j);
 }
-/*int	main(void)
+/*int	main()
 {
-	int	n = 50;
-	char s1[] = "Hello";
-	char s2[] = "Hqllo";
-
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	printf("%d", strncmp(s1, s2, n));
+	printf("%d",ft_atoi(" ---+--+1234ab567"));
 }*/

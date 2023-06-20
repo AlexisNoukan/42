@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 16:49:24 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/20 09:50:11 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/20 10:40:00 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/20 16:18:11 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putnbr(int nb)
 {
-	unsigned int	i;
+	char	d;
 
-	i = 0;
-	while ((i < n) && (s1[i] || s2[i]))
+	if (nb < 0)
 	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		++i;
+		write(1, "-", 1);
+		nb = -nb;
 	}
-	return (0);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	d = '0' + (nb % 100);
+	write(1, &d, 1);
 }
-/*int	main(void)
+/*int	main()
 {
-	int	n = 50;
-	char s1[] = "Hello";
-	char s2[] = "Hqllo";
-
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	printf("%d", strncmp(s1, s2, n));
+	ft_putnbr(42);
 }*/
