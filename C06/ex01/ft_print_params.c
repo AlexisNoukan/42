@@ -4,11 +4,19 @@
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
-	i = 0;
-	while (argc = 0, argv[0])
+	j = 1;
+	while (argc > j && argv[j][i])
 	{
-		write(1, &argv[1][i], 1);
-		++i;
+		i = 0;
+		while (argv[j][i] != '\0')
+		{
+			write(1, &argv[j][i], 1);
+			++i;
+		}
+		write(1, "\n", 1);
+	j++;
 	}
+	return (0);
 }

@@ -12,23 +12,33 @@
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_putnbr(int nb)
 {
-	char	d;
-
-	if (nb < 0)
+	if (nb == -2147483648)
 	{
-		write(1, "-", 1);
-		nb = -nb;
+		write(1, "-2147483648", 11);
 	}
-	if (nb >= 10)
+	else if (nb >= 0 && nb <= 9)
+	{
+		ft_putchar(nb + '0');
+	}
+	else if (nb < 0)
+        {
+                ft_putchar('-');
+                ft_putnbr(nb * -1);
+        }
+	else
 	{
 		ft_putnbr(nb / 10);
+		ft_putchar(nb % 10 + '0');
 	}
-	d = '0' + (nb % 100);
-	write(1, &d, 1);
 }
-/*int	main()
+int	main()
 {
-	ft_putnbr(42);
-}*/
+	ft_putnbr(-2147483648);
+}
