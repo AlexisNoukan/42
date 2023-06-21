@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 12:33:57 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/21 12:42:07 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/21 15:06:32 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int	i;
 	int	j;
 
-	j = argc - 1;
+	j = 1;
 	while (j > 0 && argv[j])
 	{
 		i = 0;
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 			++i;
 		}
 		write(1, "\n", 1);
-	j--;
+	j++;
 	}
 	return (0);
 }
