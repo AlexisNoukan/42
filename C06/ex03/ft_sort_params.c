@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 12:33:57 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/21 12:42:07 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/21 11:12:46 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/21 12:43:42 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+char	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+char	ft_putstr(char *str)
+{
+	while (str[i])
+	{
+		ft_putchar(i);
+		i++;
+	}
+}
+
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
-
-	j = argc - 1;
-	while (j > 0 && argv[j])
-	{
-		i = 0;
-		while (argv[j][i] != '\0')
-		{
-			write(1, &argv[j][i], 1);
-			++i;
-		}
-		write(1, "\n", 1);
-	j--;
-	}
 	return (0);
 }
