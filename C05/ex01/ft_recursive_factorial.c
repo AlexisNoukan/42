@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 08:28:26 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/22 09:20:13 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/22 19:58:31 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_recursive_factorial(int nb)
 	result = nb * ft_recursive_factorial(nb - 1);
 	return (result);
 }
-
-int	main()
+/*
+int	main(void)
 {
 	printf("%d", ft_recursive_factorial(4));
 	return (0);
-}
+}*/

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmillet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 16:05:14 by gmillet           #+#    #+#             */
-/*   Updated: 2023/06/11 16:57:28 by gmillet          ###   ########.fr       */
+/*   Created: 2023/06/22 20:21:51 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/22 20:28:16 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
+#include <string.h>
+#include <stdio.h>
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+char	*ft_strdup(char *src)
+{
+	return (0);
+}
+
+int	main(void)
+{
+	printf("%s\n", ft_strdup("Hello World!"));
+	printf("%s", strdup("Hello World!"));
 }
