@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 08:28:26 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/22 09:20:13 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/22 13:59:58 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/22 15:16:23 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_recursive_power(int nb, int power)
 {
-	int	result;
-
-	if (nb == 0 || nb == 1)
+	if (power == 0)
 		return (1);
-	result = nb * ft_recursive_factorial(nb - 1);
-	return (result);
+	if (power < 0)
+		return (0);
+	if (power == 1)
+		return (nb);
+	if (power > 0)
+		return(nb * ft_recursive_power(nb,power - 1));
+	return (0);
 }
 
 int	main()
 {
-	printf("%d", ft_recursive_factorial(4));
+	printf("%d", ft_recursive_power(4, 4));
 	return (0);
 }
