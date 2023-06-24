@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 20:21:51 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/24 12:46:39 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/24 19:36:45 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 #include <string.h>
 #include <stdio.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-  int l;
+	int	l;
 
-  l = 0;
-  while(str[l])
-  {
-    l++;
-  }
-  return (l);
+	l = 0;
+	while (str[l])
+	{
+		l++;
+	}
+	return (l);
 }
 
-char  *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	int		length;
 	char	*dest;

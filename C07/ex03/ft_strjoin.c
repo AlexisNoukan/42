@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 19:26:58 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/24 19:34:07 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/24 19:40:05 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	if (size == 0)
 		return (0);
-
 }
