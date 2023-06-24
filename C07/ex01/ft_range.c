@@ -1,51 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 20:21:51 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/24 12:46:39 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/24 12:47:12 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/24 14:30:39 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-int ft_strlen(char *str)
+int	*ft_range(int min, int max)
 {
-  int l;
-
-  l = 0;
-  while(str[l])
-  {
-    l++;
-  }
-  return (l);
-}
-
-char  *ft_strdup(char *src)
-{
-	int		length;
-	char	*dest;
-	int		i;
+	int	*tab;
+	int	i;
 
 	i = 0;
-	length = ft_strlen(src);
-	dest = (char *)malloc((length + 1) * sizeof(char));
-	while (src[i])
+	if (min >= max)
+		return (0);
+	tab = (int *)malloc(sizeof(*tab) * (max - min));
+	while(min < max)
 	{
-		dest[i] = src[i];
+		tab[i] = min;
+		min++;
 		i++;
+
 	}
-	dest[length] = '\0';
-	return (dest);
+	return (tab);
 }
-/*
+
 int	main(void)
 {
-	printf("%s\n", ft_strdup("Hello World!"));
-	printf("%s", strdup("Hello World!"));
-}*/
+	int *tabi;
+	int	i;
+
+	i = 0;
+	tabi = ft_range(1, 10);
+
+	while (tabi[i])
+	{
+		printf("%d\n", tabi[i]);
+		i++;
+	}
+	return (0);
+}

@@ -1,51 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 20:21:51 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/24 12:46:39 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/24 14:31:37 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/24 19:25:48 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
-int ft_strlen(char *str)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-  int l;
+	int	i;
+	int *tab;
 
-  l = 0;
-  while(str[l])
-  {
-    l++;
-  }
-  return (l);
-}
-
-char  *ft_strdup(char *src)
-{
-	int		length;
-	char	*dest;
-	int		i;
-
+	if (min > max)
+		return (0);
+	tab = (int *)malloc(sizeof(*tab) * (max - min));
 	i = 0;
-	length = ft_strlen(src);
-	dest = (char *)malloc((length + 1) * sizeof(char));
-	while (src[i])
+	while (min < max)
 	{
-		dest[i] = src[i];
-		i++;
+		tab[i] = min;
+		min++;
+		i++;	
 	}
-	dest[length] = '\0';
-	return (dest);
+	*range = tab;
+	return (i);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strdup("Hello World!"));
-	printf("%s", strdup("Hello World!"));
-}*/
+
+int main(){
+    int **tab = malloc(sizeof(int**));
+    int ret = ft_ultimate_range(tab, 10, 20);
+    for (int i = 0; i < 10; i++)
+        printf("t[%d] = %d\n", i, (*tab)[i]);
+    printf("return = %d\n", ret);
+    
+}
