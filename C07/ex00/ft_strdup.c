@@ -13,8 +13,20 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strdup(char *src)
+int ft_strlen(char *str)
 {
+
+}
+
+char  *ft_strdup(char *src)
+{
+  int i;
+
+  i = 0;
+  while(src[i])
+  {
+    i++;
+  }
 	return (0);
 }
 
