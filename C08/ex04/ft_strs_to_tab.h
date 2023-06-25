@@ -13,4 +13,6 @@
 #ifndef FT_STRS_TO_TAB_H
 #define FT_STRS_TO_TAB_H
 
+struct  
 
+#endif
