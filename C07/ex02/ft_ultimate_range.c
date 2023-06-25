@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 14:31:37 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/24 19:39:28 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/25 13:00:05 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	i;
 	int	*tab;
 
-	if (min > max)
+	if (min >= max)
 		return (0);
 	tab = (int *)malloc(sizeof(*tab) * (max - min));
 	i = 0;
