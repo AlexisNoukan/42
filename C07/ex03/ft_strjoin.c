@@ -58,7 +58,7 @@ char *ft_strjoin(int size, char **strs, char *sep)
     int sep_length;
     int i;
 
-	total_len = 0;
+	total_length = 0;
 	sep_length = ft_strlen(sep);
 	i = 0;
 	while (i < size)
@@ -69,7 +69,7 @@ char *ft_strjoin(int size, char **strs, char *sep)
 
     int total_sep_length = (size - 1) * sep_length;
     char *result = (char *)malloc(total_length + total_sep_length + 1);
-    if (result == '\0')
+    if (result == 0)
         return (0);
 
     ft_strcat(result, strs[0]);
@@ -85,7 +85,14 @@ char *ft_strjoin(int size, char **strs, char *sep)
     return result;
 }
 
-int	main(int argc, char **argv)
+
+int main()
 {
-	
+    char *strs[] = {"Hello", "world", "from", "Alexis", "Noukan!"};
+    char *sep = "-";
+    char *result = ft_strjoin(4, strs, sep);
+    printf("%s\n", result);
+    free(result);
+
+    return 0;
 }
