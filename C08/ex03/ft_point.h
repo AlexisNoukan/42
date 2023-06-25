@@ -6,8 +6,17 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:35:54 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/25 14:35:57 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/25 14:46:42 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_POINT_H
+#define FT_POINT_H
 
+#typedef struct point
+{
+	int	x;
+	int	y;
+}t_point;
+
+#endif
