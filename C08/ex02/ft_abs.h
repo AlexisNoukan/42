@@ -6,13 +6,12 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:34:57 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/25 14:42:43 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/26 11:35:46 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
-#define FT_ABS_H
+# define FT_ABS_H
 
-#define ABS(Value) ((Value < 0) ? (-Value) : (Value))
-
+# define ABS(Value) ((Value < 0) ? (-Value) : (Value))
 #endif
