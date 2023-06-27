@@ -6,7 +6,7 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:24:29 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/26 19:00:59 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/27 11:24:38 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	t_stock_str	*tab;
 	int			i;
 
-	tab = malloc(t_stock_str) * (ac + 1);
+	tab = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (tab == 0)
 		return (0);
 	i = 0;
