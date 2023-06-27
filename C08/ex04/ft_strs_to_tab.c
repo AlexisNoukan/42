@@ -6,10 +6,11 @@
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:24:29 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/27 11:24:38 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/27 15:29:55 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "ft_stock_str.h"
 
 int	ft_strlen(char *str)

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_table.c                                    :+:      :+:    :+:   */
+/*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:36:45 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/27 11:25:09 by anoukan          ###   ########.fr       */
+/*   Updated: 2023/06/27 15:20:51 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
-char	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-char	ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	int	i;
 
@@ -50,12 +51,13 @@ void	ft_show_tab(struct s_stock_str *par)
 	int	i;
 
 	i = 0;
-	while (par[i].str)
+	while (par[i].str != 0)
 	{
 		ft_putstr(par[i].str);
 		ft_putnbr(par[i].size);
 		ft_putchar('\n');
 		ft_putstr(par[i].copy);
 		ft_putchar('\n');
+		i++;
 	}
 }
