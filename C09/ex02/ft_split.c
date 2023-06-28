@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/12 11:22:28 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/28 10:25:37 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/28 11:39:47 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/28 11:44:16 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+char **ft_split(char *str, char *charset)
 {
-	while (*str)
-	{
-		write(1, str, 1);
-		++str;
-	}
+	
 }
-/*int	main()
-{
-	char s[] = "Hello, world!";
-	ft_putstr(s);
-	return 0;
-}*/
