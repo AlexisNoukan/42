@@ -1,63 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoukan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 14:36:45 by anoukan           #+#    #+#             */
-/*   Updated: 2023/06/28 16:17:06 by anoukan          ###   ########.fr       */
+/*   Created: 2023/06/28 21:31:27 by anoukan           #+#    #+#             */
+/*   Updated: 2023/06/28 21:58:17 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_stock_str.h"
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+int ft_strlen(char *c)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+    i = 0;
+    while (*c)
+        i++;
+    return (i);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr_base(int nbr, char *base)
 {
-	if (nb < 0)
+	int	temp;
+
+	temp = 0;
+	if (nbr >= 0 && nbr <= 9)
 	{
-		nb = -nb;
+		ft_putchar(nbr + '0');
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
+	else if (nbr < 0)
+        {
+                ft_putchar('-');
+                ft_putnbr_base(nbr * -1);
+        }
 	else
-		ft_putchar(nb + '0');
+	{
+		ft_putnbr_base(nbr / ft_strlen(base));
+		temp = nbr % ft_strlen(base);
+		ft_putchar(base[temp]);
+	}
 }
 
-void	ft_show_tab(struct s_stock_str *par)
+int	main()
 {
-	int	i;
-
-	i = 0;
-	while (par[i].str != 0)
-	{
-		ft_putstr(par[i].str);
-		ft_putchar('\n');
-		ft_putnbr(par[i].size);
-		ft_putchar('\n');
-		ft_putstr(par[i].copy);
-		ft_putchar('\n');
-		i++;
-	}
+	ft_putnbr(14, "01");
 }
